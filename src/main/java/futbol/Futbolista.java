@@ -9,7 +9,7 @@ public abstract class  Futbolista implements  Comparable<Object> {
 	
 	public Futbolista(){
 		
-		this.nombre = "nombre";
+		this.nombre = "Maradona";
 		this.edad = 30;
 		this.posicion = "delantero";
 	}
@@ -32,7 +32,7 @@ public abstract class  Futbolista implements  Comparable<Object> {
 	
 	public boolean equals(Futbolista f){
 		boolean b = false;
-		if(this.nombre == f.nombre){
+		if(this.nombre == f.nombre && this.edad ==  f.edad && this.posicion == f.posicion){
 			b = true;
 		}
 		return b;
