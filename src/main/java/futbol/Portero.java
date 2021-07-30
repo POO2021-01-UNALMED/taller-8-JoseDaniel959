@@ -3,7 +3,7 @@ package futbol;
 public class Portero extends Futbolista  {
 	public short golesRecibidos;
 	public byte dorsal;
-	public final String posicion = "Portero";
+	
 	
 	
 	
@@ -23,19 +23,22 @@ public class Portero extends Futbolista  {
 
 	 @Override
 	public String toString(){
-		return  "El futbolista "+this.nombre+" tiene "+this.edad+ ", y juega de"+this.posicion	+" con el dorsal "+this.dorsal+ ". Le han marcado "+this.golesRecibidos;
+		return  "El futbolista "+this.nombre+" tiene "+this.edad+ ", y juega de "+this.posicion	+" con el dorsal "+this.dorsal+ ". Le han marcado "+this.golesRecibidos;
 		
 	}	
 
 	
 	@Override
 	public int compareTo(Object o) {
-		return this.golesRecibidos - ((Portero)o).golesRecibidos;
+		return (int)((Portero)o).golesRecibidos - this.golesRecibidos  ;
 	}
 	
 	public boolean jugarConLasManos() {
 		
 		return true;
 	}
+	
+	
+	
 	
 }
