@@ -1,9 +1,9 @@
 package futbol;
 
-public class Portero extends Futbolista {
+public class Portero extends Futbolista  {
 	public short golesRecibidos;
 	public byte dorsal;
-	private final String posicion = "portero";
+	public final String posicion = "Portero";
 	
 	
 	
@@ -15,7 +15,7 @@ public class Portero extends Futbolista {
 
 
 	public Portero(String nombre, int edad,short golesRecibidos, byte dorsal) {
-		super(nombre, edad, "portero");
+		super(nombre, edad, "Portero");
 		this.golesRecibidos = golesRecibidos;
 		this.dorsal = dorsal;
 	}
@@ -30,7 +30,7 @@ public class Portero extends Futbolista {
 	
 	@Override
 	public int compareTo(Object o) {
-		return this.edad - ((Portero)o).edad;
+		return this.golesRecibidos - ((Portero)o).golesRecibidos;
 	}
 	
 	public boolean jugarConLasManos() {
