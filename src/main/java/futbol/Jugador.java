@@ -5,7 +5,7 @@ public class Jugador extends Futbolista  {
 	public byte dorsal;
 	
 	public Jugador() {
-		this.golesMarcados = 298;
+		this.golesMarcados = 289;
 		this.dorsal = 7;
 	}
 	
@@ -29,9 +29,9 @@ public class Jugador extends Futbolista  {
 	
 	
 	
-	
+	 @Override
 	public String toString(){
-		return "El futbolista "+this.nombre+ " tiene "+this.edad+ ", y juega de "+this.posicion+" con el dorsal "+this.dorsal+ ". Ha marcado "+ this.golesMarcados +"";
+		return "El futbolista "+this.nombre+ " tiene "+this.edad+ ", y juega de "+this.posicion+" con el dorsal "+this.dorsal+ ". Ha marcado "+ this.golesMarcados ;
 		
 	}
 	
