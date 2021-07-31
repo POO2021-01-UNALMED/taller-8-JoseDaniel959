@@ -1,7 +1,7 @@
 package futbol;
 
 
-public abstract class  Futbolista implements  Comparable<Object> {
+public  class  Futbolista implements  Comparable<Object> {
 	protected String nombre;
 	protected int edad;
 	protected final String posicion;
@@ -30,15 +30,18 @@ public abstract class  Futbolista implements  Comparable<Object> {
 		return "El futbolista "+ this.nombre +" tiene "+this.edad+ ", y juega de "+ this.posicion;
 	}
 	
-	public boolean equals(Futbolista f){
+	/*public boolean equals(Futbolista f){
 		boolean b = false;
 		if(this.nombre == f.nombre && this.edad ==  f.edad && this.posicion == f.posicion){
-			b = true;
+			return true;
 		}
 		return b;
-	}
+	}*/
 	
-	public abstract boolean jugarConLasManos();
+	public boolean jugarConLasManos() {
+		// TODO Auto-generated method stub
+		return false;
+	}
 		
 		
 	
@@ -78,5 +81,15 @@ public abstract class  Futbolista implements  Comparable<Object> {
 		// TODO Auto-generated method stub
 		return 0;
 	}
+	
+	
+	public static void main(String args[])  //static method  
+	{ 
+	
+	Futbolista f1 = new Futbolista();
+	Futbolista f2 = new Futbolista();
+	Futbolista f3 = f1;
+	System.out.println(!f1.equals(f2) );  
+	}  
 	
 }
